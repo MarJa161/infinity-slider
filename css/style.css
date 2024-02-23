@@ -1,0 +1,107 @@
+body {
+  position: relative;
+}
+.min-h-100vh {
+  min-height: 100vh;
+}
+.container {
+  height: 100%;
+}
+.g-list {
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  overflow: clip;
+  margin: 0;
+  padding: 0;
+}
+
+.g-list li {
+  list-style-type: none;
+  width: 60vw;
+  height: 50vh;
+  opacity: 0.25;
+  position: absolute;
+  left: 50%;
+  margin-left: -30vw;
+  border-radius: 2px;
+  transition: transform 1s, opacity 1s;
+}
+
+.g-list .g-act {
+  opacity: 1;
+  z-index: 1;
+}
+
+.g-list .g-prev,
+.g-list .g-next {
+  cursor: pointer;
+}
+
+.g-list .g-prev {
+  transform: translateX(-220px) scale(0.85);
+}
+
+.g-list .g-next {
+  transform: translateX(220px) scale(0.85);
+}
+
+.g-list .g-hide {
+  transform: translateX(-420px) scale(0.85);
+}
+
+.g-list .g-new-next {
+  transform: translateX(420px) scale(0.85);
+}
+
+.g-list .g-hide,
+.g-list .g-new-next {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+#g-swipe {
+  width: 60vw;
+  height: 50%;
+  position: absolute;
+  background-color: green;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.g-img-1 {
+  background-image: url(https://source.unsplash.com/a-statue-of-a-person-in-front-of-a-building-Ox-eWXCaXOU);
+  background-position: 65% 35%;
+  background-size: cover;
+}
+.g-img-2 {
+  background-image: url(https://source.unsplash.com/buddha-head-in-fig-tree-at-wat-mahathat-ayutthaya-historical-park-thailand-faYAPRiIpvQ);
+  background-position: center center;
+  background-size: cover;
+}
+.g-img-3 {
+  background-image: url(https://source.unsplash.com/brown-tree-trunk-on-brown-rock-OO15ngo_w6I);
+  background-position: center center;
+  background-size: cover;
+}
+.g-img-4 {
+  background-image: url(https://source.unsplash.com/a-statue-of-yoda-in-front-of-a-building-3w2zG6fBgnE);
+  background-position: center 40%;
+  background-size: cover;
+}
+.g-img-5 {
+  background-image: url(https://source.unsplash.com/naked-man-sculpture-yNlZ2Hpm4to);
+  background-position: 25% 25%;
+  background-size: cover;
+}
+.g-img-6 {
+  background-image: url(https://source.unsplash.com/a-painting-of-a-man-with-a-lion-on-his-head-9rxnPIZFA1c);
+  background-position: center 25%;
+  background-size: cover;
+}
