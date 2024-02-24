@@ -89,19 +89,22 @@ const touchEnd = (e) => {
   distX = e.changedTouches[0].pageX - startX;
   distY = e.changedTouches[0].pageY - startY;
   elapsedTime = new Date().getTime() - startTime;
-
   if (elapsedTime <= allowedTime) {
     if (
       Math.abs(distX) >= Math.abs(treshold) &&
       Math.abs(distY) <= Math.abs(restraint)
     ) {
       distX < 0 ? next() : prev();
+    } else if (
+      Math.abs(distX) <= Math.abs(treshold) &&
+      Math.abs(distY) <= Math.abs(restraint)
+    ) {
+      gSlide(e.target);
     }
   }
   e.preventDefault();
 };
 
-const gSwipe = $("#g-swipe");
-gSwipe.addEventListener("touchstart", (e) => touchStart(e), false);
-gSwipe.addEventListener("touchmove", (e) => e.preventDefault(), false);
-gSwipe.addEventListener("touchend", (e) => touchEnd(e), false);
+gSlider.addEventListener("touchstart", (e) => touchStart(e), false);
+gSlider.addEventListener("touchmove", (e) => e.preventDefault(), false);
+gSlider.addEventListener("touchend", (e) => touchEnd(e), false);
